@@ -22,7 +22,7 @@ stages:
     steps:
     - task: UsePythonVersion@0
       inputs:
-              versionSpec: '3.x'
+              versionSpec: '3.9'
               addToPath: true
       env: 
         ACTIONS_RUNTIME_TOKEN: $(8cVF4hXgcDJ6QwwmRSs6QVOc898Vrz5LYnLbzpJIH1XyoFMrgl1GJQQJ99BCACAAAAAAAAAAAAASAZDO1jG7)
