@@ -24,3 +24,18 @@ stages:
       inputs:
               versionSpec: '3.x'
               addToPath: true
+      env: 
+        ACTIONS_RUNTIME_TOKEN: $(8cVF4hXgcDJ6QwwmRSs6QVOc898Vrz5LYnLbzpJIH1XyoFMrgl1GJQQJ99BCACAAAAAAAAAAAAASAZDO1jG7)
+
+    - script: |
+              python -m pip install --upgrade pip
+              pip install -r requirements.txt
+      displayName: "Install Dependencies"
+
+    - script: |
+              python -m unittest discover -s tests
+      displayName: "Run Unit Tests"
+
+    - script: |
+              zip -r $(Build.ArtifactStagingDirectory)/python_app.zip .
+      displayName: "Package Application"
