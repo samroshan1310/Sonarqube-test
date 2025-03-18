@@ -11,7 +11,7 @@ steps:
     inputs:
       versionSpec: '3.x'
       disableDownloadFromRegistry: true
-      addToPath: true
+      addToPath: false
       architecture: 'x64'
 
   - script: |
