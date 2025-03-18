@@ -10,15 +10,17 @@ steps:
   - task: UsePythonVersion@0
     inputs:
       versionSpec: '3.x'
+      disableDownloadFromRegistry: true
+      addToPath: true
       architecture: 'x64'
 
   - script: |
-      python -m pip install --upgrade pip
+      python3 -m pip install --upgrade pip
       pip install -r requirements.txt
     displayName: 'Install dependencies'
 
   - script: |
-      python -m unittest discover
+      python3 -m unittest discover
     displayName: 'Run Tests'
 
   - task: PublishBuildArtifacts@1
