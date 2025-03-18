@@ -20,13 +20,6 @@ stages:
   - job: Build
     displayName: Build
     steps:
-    - task: UsePythonVersion@0
-      inputs:
-              versionSpec: '3.x'
-              disableDownloadFromRegistry: false
-              addToPath: true
-      
-
     - script: |
               python -m pip install --upgrade pip
               pip install -r requirements.txt
